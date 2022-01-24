@@ -55,7 +55,7 @@ bool state = true ;
 
 __weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	if(GPIO_Pin == GPIO_PIN_0 && state == true)
+	if((GPIO_Pin == GPIO_PIN_0) && (state == true))
 	{
 		HAL_TIM_Base_Start_IT(&htim1);
 		state = false ;
